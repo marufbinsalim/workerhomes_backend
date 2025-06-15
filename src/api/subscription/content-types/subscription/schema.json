@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "singularName": "subscription",
+    "pluralName": "subscriptions",
+    "displayName": "Subscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start_date": {
+      "type": "date"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "subscriptions"
+    },
+    "dwellings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dwelling.dwelling",
+      "mappedBy": "subscription"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::package.package",
+      "inversedBy": "subscriptions"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "stripe_customer_id": {
+      "type": "string"
+    },
+    "stripe_product_id": {
+      "type": "string"
+    },
+    "stripe_subscription_id": {
+      "type": "string"
+    },
+    "isExpired": {
+      "type": "boolean",
+      "default": false
+    },
+    "stripe_session_id": {
+      "type": "string"
+    },
+    "stripe_tracking_id": {
+      "type": "string"
+    },
+    "payment_status": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "payment_currency": {
+      "type": "string"
+    },
+    "payment_amount": {
+      "type": "string"
+    },
+    "stripe_current_period_start": {
+      "type": "string"
+    },
+    "stripe_current_period_end": {
+      "type": "string"
+    },
+    "isFree": {
+      "type": "boolean",
+      "default": false
+    },
+    "pending_subscription": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscription.subscription",
+      "inversedBy": "parent_subscription"
+    },
+    "parent_subscription": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscription.subscription",
+      "inversedBy": "pending_subscription"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claims",
+  "info": {
+    "singularName": "claim",
+    "pluralName": "claims",
+    "displayName": "Claims",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dwelling.dwelling",
+      "inversedBy": "claims"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "claims"
+    },
+    "isApproved": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pending_subscriptions",
+  "info": {
+    "singularName": "pending-subscription",
+    "pluralName": "pending-subscriptions",
+    "displayName": "Pending Subscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prev_subscription": {
+      "type": "string"
+    },
+    "new_subscription": {
+      "type": "string"
+    },
+    "isSynced": {
+      "type": "boolean",
+      "default": false
+    },
+    "customer": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "prev_strapi_subscription": {
+      "type": "string"
+    },
+    "new_strapi_subscription": {
+      "type": "string"
+    },
+    "dwelling": {
+      "type": "string"
+    }
+  }
+}

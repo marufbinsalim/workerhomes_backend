@@ -1,0 +1,45 @@
+{
+  "name": "workerhomes-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.11",
+    "@google-cloud/translate": "^8.5.0",
+    "@mailchimp/mailchimp_transactional": "^1.0.59",
+    "@strapi/plugin-cloud": "4.25.6",
+    "@strapi/plugin-i18n": "4.25.6",
+    "@strapi/plugin-seo": "^1.9.8",
+    "@strapi/plugin-users-permissions": "4.25.6",
+    "@strapi/provider-email-sendgrid": "^4.25.11",
+    "@strapi/strapi": "4.25.6",
+    "deepl": "^1.0.13",
+    "pg": "8.8.0",
+    "pg-connection-string": "^2.6.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "slugify": "^1.6.6",
+    "strapi-plugin-transformer": "^3.1.2",
+    "stripe": "^15.8.0",
+    "styled-components": "5.3.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "4b3b89e6-b701-4e72-933f-36770373a7ce"
+  }
+}

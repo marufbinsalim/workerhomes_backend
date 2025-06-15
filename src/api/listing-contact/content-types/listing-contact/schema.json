@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_contacts",
+  "info": {
+    "singularName": "listing-contact",
+    "pluralName": "listing-contacts",
+    "displayName": "Listing Contacts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_or_company": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "check_in": {
+      "type": "datetime"
+    },
+    "check_out": {
+      "type": "datetime"
+    },
+    "guests": {
+      "type": "string"
+    },
+    "additional_information": {
+      "type": "text"
+    },
+    "dwelling": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dwelling.dwelling",
+      "inversedBy": "listing_contacts"
+    },
+    "isResponded": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

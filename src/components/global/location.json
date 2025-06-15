@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_global_locations",
+  "info": {
+    "displayName": "Location",
+    "icon": "pinMap",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "street_one": {
+      "type": "string",
+      "required": true
+    },
+    "street_two": {
+      "type": "string"
+    },
+    "zip_code": {
+      "type": "string",
+      "required": true
+    },
+    "geo": {
+      "type": "json"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

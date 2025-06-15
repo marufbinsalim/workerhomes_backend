@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_global_socials",
+  "info": {
+    "displayName": "Social",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "WHATSAPP",
+        "FACEBOOK",
+        "INSTAGRAM",
+        "GOOGLE LISTING",
+        "WEBSITE",
+        "EMAIL",
+        "PHONE"
+      ]
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
